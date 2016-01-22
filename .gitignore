@@ -1,0 +1,11 @@
+app/restfood/.metadata
+app/restfood/.settings
+app/restfood/.classpath
+app/restfood/.project
+app/restfood/target
+app/restfood/*.class
+app/restfood/*.jar
+app/restfood/*.war
+app/restfood/*.ear
+app/restfood/*.log
+app/restfood/*.project
