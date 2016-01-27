@@ -1,47 +1,47 @@
 angular.module('starter.services', [])
 
-.factory('Chats', function() {
+.factory('Principal', function() {
   // Might use a resource here that returns a JSON array
 
   // Some fake testing data
-  var chats = [{
+  var principal = [{
     id: 0,
-    name: 'Ben Sparrow',
-    lastText: 'You on your way?',
-    face: 'img/ben.png'
+    nome: 'Picanha especial',
+    descricao: 'Picanha, Batata St Patrick, Arroz, Farofa e Vinagrete',
+    imagem: 'img/ben.png'
   }, {
     id: 1,
-    name: 'Max Lynx',
-    lastText: 'Hey, it\'s me',
-    face: 'img/max.png'
+    nome: 'Churrasco misto',
+    descricao: '1 Bife, 1 Filé de Frango, 1 Lombo, 2 Linguiças, Arroz, Farofa, Batata Frita e Vinagrete',
+    imagem: 'img/max.png'
   }, {
     id: 2,
-    name: 'Adam Bradleyson',
-    lastText: 'I should buy a boat',
-    face: 'img/adam.jpg'
+    nome: 'Strogonnof de frango',
+    descricao: 'Arroz e Batata Palha',
+    imagem: 'img/adam.jpg'
   }, {
     id: 3,
-    name: 'Perry Governor',
-    lastText: 'Look at my mukluks!',
-    face: 'img/perry.png'
+    nome: 'Lombo de porco',
+    descricao: 'Arroz, Farofa, Batata Frita e Vinagrete',
+    imagem: 'img/perry.png'
   }, {
     id: 4,
-    name: 'Mike Harrington',
-    lastText: 'This is wicked good ice cream.',
-    face: 'img/mike.png'
+    nome: 'Filé de peixe',
+    descricao: 'Arroz, Pirão, Batata Frita e Salada',
+    imagem: 'img/mike.png'
   }];
 
   return {
     all: function() {
-      return chats;
+      return principal;
     },
     remove: function(chat) {
-      chats.splice(chats.indexOf(chat), 1);
+    	principal.splice(principal.indexOf(chat), 1);
     },
     get: function(chatId) {
-      for (var i = 0; i < chats.length; i++) {
-        if (chats[i].id === parseInt(chatId)) {
-          return chats[i];
+      for (var i = 0; i < principal.length; i++) {
+        if (principal[i].id === parseInt(chatId)) {
+          return principal[i];
         }
       }
       return null;

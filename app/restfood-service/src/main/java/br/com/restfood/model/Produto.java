@@ -19,6 +19,8 @@ public class Produto {
 	private String descricao;
 	
 	private Double preco;
+	
+	private String imagem;
 
 	public Long getId() {
 		return id;
@@ -58,6 +60,14 @@ public class Produto {
 
 	public void setPreco(Double preco) {
 		this.preco = preco;
+	}
+
+	public String getImagem() {
+		return imagem;
+	}
+
+	public void setImagem(String imagem) {
+		this.imagem = imagem;
 	}
 	
 	
