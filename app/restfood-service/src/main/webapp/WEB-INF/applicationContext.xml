@@ -30,5 +30,6 @@
 	
 	<context:annotation-config />
 	<context:component-scan base-package="br.com.restfood.*" />
+	<context:component-scan base-package="br.ufc.quixada.npi.*" />
 	
 </beans>
