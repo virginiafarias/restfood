@@ -2,14 +2,9 @@
   <ion-content>
     <ion-list>
       <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="p in principal" type="item-text-wrap" href="#/tab/principal/{{p.id}}">
-        <img ng-src="{{p.imagem}}">
         <h2>{{p.nome}}</h2>
         <p>{{p.descricao}}</p>
         <i class="icon ion-chevron-right icon-accessory"></i>
-
-        <ion-option-button class="button-assertive" ng-click="remove(p)">
-          Delete
-        </ion-option-button>
       </ion-item>
     </ion-list>
   </ion-content>

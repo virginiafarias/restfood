@@ -1,28 +1,32 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope) {})
+.controller('PrincipalCtrl', function($scope, $http) {
+	$http.get('http://localhost:8080/restfood-service/').then(function(resp) {
+	    $scope.principal = resp.data;
+	  }, function(err) {
+		  
+	  })
+	
+	
+})
 
-.controller('PrincipalCtrl', function($scope, Principal) {
-  // With the new view caching in Ionic, Controllers are only called
-  // when they are recreated or on app start, instead of every page change.
-  // To listen for when this page is active (for example, to refresh data),
-  // listen for the $ionicView.enter event:
-  //
-  //$scope.$on('$ionicView.enter', function(e) {
-  //});
-
-  $scope.principal = Principal.all();
-  $scope.remove = function(chat) {
-	  Principal.remove(chat);
+.controller('BebidasCtrl', function($scope, Bebidas) {
+  $scope.bebidas = Bebidas.all();
+  $scope.remove = function(produto) {
+	  Bebidas.remove(produto);
   };
 })
 
-.controller('ChatDetailCtrl', function($scope, $stateParams, Principal) {
-  $scope.principal = Principal.get($stateParams.chatId);
+.controller('EntradaCtrl', function($scope, Entrada) {
+  $scope.entrada = Entrada.all();
+  $scope.remove = function(produto) {
+	  Entrada.remove(produto);
+  };
 })
 
-.controller('AccountCtrl', function($scope) {
-  $scope.settings = {
-    enableFriends: true
+.controller('SobremesaCtrl', function($scope, Sobremesa) {
+  $scope.sobremesa = Sobremesa.all();
+  $scope.remove = function(produto) {
+	  Sobremesa.remove(produto);
   };
-});
+})
